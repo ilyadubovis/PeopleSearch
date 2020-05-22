@@ -1,0 +1,74 @@
+<mat-form-field class="search-bar">
+  <mat-label>Search</mat-label>
+  <input matInput name="search" [(ngModel)]="searchString" #search (keydown.enter)="applySearch(search.value)" maxlength="50" placeholder="">
+  <mat-hint align="start"><strong>Type any fargment of person's first or last name and hit ENTER</strong> </mat-hint>
+  <mat-hint align="end">{{searchString.length}} / 50</mat-hint>
+</mat-form-field>
+<br />
+<div *ngIf="!people" style="width:80%">
+  <p><em>Loading People Information...</em></p>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>
+
+<div *ngIf="people && people.length==0">
+  <p><em>There were no people found for a given criteria.</em></p>
+</div>
+
+<div *ngIf="people" class="row justify-content-between">
+  <div class="card border-info mb-3 mr-1 col-lg-5 col-md-6 col-sm-12 col-xs-12 col-12 p-1" *ngFor="let person of people; let index=index">
+    <div class="card-header">
+      {{person.firstName}}
+    </div>
+    <div class="card-body">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-3 col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img class="photo" [src]="person.photoFile" alt="No Photo" />
+          </div>
+          <div class="col-8 col-xs-9 col-sm-9 col-md-9 col-lg-9" style="font-size:small">
+            <div class="row">
+              <div class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                Name
+              </div>
+              <div class="col-7 col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <b><i>{{person.firstName}} {{person.lastName}}</i></b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                Age
+              </div>
+              <div class="col-7 col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <b>{{person.age}}</b> ({{person.birthDate | date}})
+              </div>
+            </div>
+            <div class="row" style="margin-top:5px;">
+              <div class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                Address
+              </div>
+              <div class="col-7 col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <b>{{person.streetAddress}}</b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+              </div>
+              <div class="col-7 col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <b>{{person.city}}, {{person.state}} {{person.zipCode}}</b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                Interests
+              </div>
+              <div class="col-7 col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <b>{{person.interestsAsString}}</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
