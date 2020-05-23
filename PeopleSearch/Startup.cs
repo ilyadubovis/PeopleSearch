@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PeopleSearch.Models;
 
-namespace WebApplication2
+namespace PeopleSearch
 {
     public class Startup
     {
