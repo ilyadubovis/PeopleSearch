@@ -7,7 +7,7 @@ It is built with Visual Studio 2019 as a single Visual Studio project.
 
 ## Building blocks
 Back-end: .NET Core 3.1;\
-ORM: Entity Framework Core / SQL server (Data Migration is include in the project; Please run 'update-database' in PM to it);\
+ORM: Entity Framework Core / SQL server (Data Migration is included in the project. Please run 'update-database' in PM to apply it);\
 Front-end: Angular/Rxjs/Material/Bootstrap;\
 Tests: PeopleSearch.UnitTests project (MSTest), list-people.component.spec.tc.
 
