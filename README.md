@@ -24,7 +24,8 @@ and has the migration to seed the database with 7 entities.
 2. It performs fake data retrieval delay that can be adjusted by the setting "DataRetrievalDelay" in appsettings.json (currently is set to 3 sec). 
 3. The service and client parts support all CRUD operations, though UI only calls read operation.
 
-* Please run Update-Database command in NPM to synchronize the DB (apply data migration)
+# Please run 'update-database' command in Package Manager Console to synchronize the DB (apply the data migration provided in the projrct).
+
 
 
 
