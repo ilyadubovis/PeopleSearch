@@ -3,9 +3,9 @@ PeopleSearch is an ASP.NET Core Responsive SPA.
 It is built with Visual Studio 2019 as a single Visual Studio project.
 
 ## Building blocks
-Back-end: .NET Core 3.1;
-ORM: Entity Framework Core / SQL server;
-Front-end: Angular/Rxjs/Material/Bootstrap.
+Back-end: .NET Core 3.1;\
+ORM: Entity Framework Core / SQL server;\
+Front-end: Angular/Rxjs/Material/Bootstrap.\
 Test: PeopleSearch.UnitTests project (MSTest), list-people.component.spec.tc(Jasmin)
 
 ## Description
