@@ -14,7 +14,7 @@ Tests: PeopleSearch.UnitTests project (MSTest), list-people.component.spec.tc.
 ## Description
 The client app displays cards for all entities in the database and lets user enter a search string.
 It sends a search criteria to the service part via HTTP GET request. 
-The service Controller returns people information, which first name, last name or full name (first + last names) contains a given sting (case-insensitive).
+The service Controller returns people information, which first name, last name or full name (first + last names) contains a given string (case-insensitive).
 if a search string is blank, the service returns all entities.
 While UI is waiting for a response it displays a progress indicator.
 If there are no entities for a given search criteria, UI shows the corresponding message.
