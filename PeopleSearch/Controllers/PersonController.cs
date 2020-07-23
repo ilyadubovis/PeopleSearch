@@ -63,7 +63,7 @@ namespace PeopleSearch.Controllers
                 _repository.Add(person);
                 return Ok(person);
             }
-            return BadRequest("Person data is null.");
+            return BadRequest("Person data is null!");
         }
 
         [HttpPut]
